@@ -7,7 +7,10 @@ import { State } from '../../store/index'
 
 export default function Summary(){
 
+  //estado total
   const amount = useSelector((state: State)=> state.calculator)
+  const incomeValue = useSelector((state: State)=> state.income)
+  const outcomeValue = useSelector((state: State)=> state.outcome)
 
   return(
     <Container>
@@ -16,7 +19,7 @@ export default function Summary(){
           <span>Entradas</span>
           <img src={incomeImg} alt="entradas" />
         </header>
-        <strong>R$ {amount},00</strong>
+        <strong>R$ {incomeValue},00</strong>
       </div>
 
       <div>
@@ -24,7 +27,7 @@ export default function Summary(){
           <span>Saídas</span>
           <img src={outcomeImg} alt="saídas" />
         </header>
-        <strong>R$ 500,00</strong>
+        <strong>R$ {outcomeValue},00</strong>
       </div>
 
       <div>
@@ -32,7 +35,7 @@ export default function Summary(){
           <span>Total</span>
           <img src={totalImg} alt="total" />
         </header>
-        <strong>R$ 500,00</strong>
+        <strong>R$ {amount},00</strong>
       </div>
     </Container>
   )

@@ -48,3 +48,5 @@ export default function NewTransactionModal({isOpen, onRequestClose}: NewTransac
     </Modal>
   )
 }
+
+//onClick={receiver === 'eu' ? ()=> incomeAmount(amount) : ()=> outcomeAmount(amount)}
